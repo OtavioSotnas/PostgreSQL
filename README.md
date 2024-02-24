@@ -10,8 +10,9 @@
 | numeric | Números com casas decimais pré-definidas | Dinheiro ou Renda |
 
 - Tipos de Caracteres:
-| ------- | ------- | ------- |
+  
 |     Nome      |                   Descrição                |             Exemplo              |
+| ------- | ------- | ------- |
 | varchar(n)    | Textos com tamanho pré determinado         | O nome de uma pessoa             |
 | char(n)       | Quantidade exata de caracteres utilizados  | CPF sempre vai ter 11 caracteres |
 | text          | Textos com tamanhos infinitos              | Descrição ou obervações          |
