@@ -28,7 +28,7 @@ CREATE TABLE aluno(
 
 **Inserindo um dado na tabela:**
 ```sql
-INSERT INTO aluno (
+INSERT INTO aluno(
 	nome, 
 	cpf,
 	idade,
