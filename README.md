@@ -27,7 +27,7 @@ CREATE TABLE aluno (
 ```
 
 **Inserindo um dado na tabela:**
-```postgresql
+```sql
 INSERT INTO aluno (nome, cpf, idade, ativo) 
   VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
