@@ -33,9 +33,6 @@ VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
 **Modificando um dado:**
 ```sql
-SELECT * FROM aluno
-WHERE id = 1
-
 UPDATE aluno
 	SET nome = 'Marianna', cpf = '10987654321', idade = '20', ativo = FALSE
 WHERE id = 1
