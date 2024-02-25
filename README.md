@@ -1,4 +1,4 @@
-# PostgreSQL
+# **PostgreSQL**
 
 **Tipos de dados:**
 
