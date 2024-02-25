@@ -1,4 +1,4 @@
- # PostgreSQL
+# PostgreSQL
 
 **Tipos de dados:**
 
@@ -15,9 +15,9 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
-# Executando Operações
+## Executando Operações
 
-## Para criar uma tabela:
+### Para criar uma tabela:
 ```sql
 CREATE TABLE aluno (
 	id SERIAL, 
@@ -28,27 +28,27 @@ CREATE TABLE aluno (
 );
 ```
 
-## Inserindo um dado na tabela:
+### Inserindo um dado na tabela:
 ```sql
 INSERT INTO aluno (nome, cpf, idade, ativo) 
   VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
-## Modificando um dado:
+### Modificando um dado:
 ```sql
 UPDATE aluno
   SET nome = 'Marianna', cpf = '10987654321', idade = '20', ativo = FALSE
   WHERE id = 1
 ```
-## Excluindo um dado:
+### Excluindo um dado:
 ```sql
 DELETE 
   FROM aluno
   WHERE nome = 'Marianna';
 ```
 
-# Consultas com Filtros
+## Consultas com Filtros
 
-## Selecionando colunas específicas da tabela:
+### Selecionando colunas específicas da tabela:
 
 O asterísco retorna todas colunas da tabela
 ```sql
