@@ -17,7 +17,7 @@
 
 **Para criar uma tabela:** 
 ```sql
-CREATE TABLE aluno(
+CREATE TABLE aluno (
 	id SERIAL, 
 	nome VARCHAR(255),
 	cpf CHAR(11),
@@ -28,7 +28,7 @@ CREATE TABLE aluno(
 
 **Inserindo um dado na tabela:**
 ```sql
-INSERT INTO aluno(nome, cpf, idade, ativo) 
+INSERT INTO aluno (nome, cpf, idade, ativo) 
 VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
 **Modificando um dado:**
