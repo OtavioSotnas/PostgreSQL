@@ -15,8 +15,7 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
-Para criar uma tabela: 
-
+**Para criar uma tabela:** 
 ```sql
 CREATE TABLE aluno(
 	id SERIAL, 
@@ -25,4 +24,20 @@ CREATE TABLE aluno(
 	idade INTEGER,
 	ativo BOOLEAN
 );
+```
+
+**Inserindo um dado na tabela:**
+```sql
+INSERT INTO aluno (
+	nome, 
+	cpf,
+	idade,
+	ativo,
+) 
+VALUES (
+	'Otávio',
+	'12345678901',
+	20,
+	TRUE,
+)
 ```
