@@ -1,4 +1,4 @@
-# PostgreSQL
+ # PostgreSQL
 
 **Tipos de dados:**
 
@@ -9,7 +9,7 @@
 | serial | Números inteiros positivos com incremento automático  | O ID em uma base de dados | 1 |
 | numeric(10,2) | Números com casas decimais pré-definidas | Dinheiro ou Renda | 1400.20| 
 | varchar(n) | Textos com tamanho pré determinado | O nome de uma pessoa | 'Otávio' |
-| char(n) | Quantidade exata de caracteres utilizados | CPF sempre vai ter 11 caracteres | '123.456.789-10 |
+| char(n) | Quantidade exata de caracteres utilizados | CPF sempre vai ter 11 caracteres | '12345678910 |
 | text | Textos com tamanhos infinitos | Descrição ou obervações | '............................................'|
 | date | Data sem o tempo do dia | Data de nascimento | '2003-06-02' |
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
