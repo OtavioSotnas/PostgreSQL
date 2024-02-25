@@ -43,3 +43,13 @@ DELETE
   FROM aluno
   WHERE nome = 'Marianna';
 ```
+
+**Selecionando colunas específicas da tabela:**
+```sql
+SELECT * FROM aluno -- O * retorna todas colunas da tabela
+```
+```sql
+SELECT nome, idade
+FROM aluno
+-- Desta maneira retorna só as colunas que passarmos
+```
