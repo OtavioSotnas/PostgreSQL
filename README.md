@@ -50,12 +50,12 @@ DELETE
 
 ### Selecionando colunas específicas da tabela:
 
-- O asterísco retorna todas colunas da tabela
+O asterísco retorna todas colunas da tabela
 ```sql
 SELECT * FROM aluno 
 ```
 
-- Desta maneira retorna só as colunas que passarmos
+Desta maneira retorna só as colunas que passarmos
 ```sql
 SELECT nome AS "Nome do aluno", 
 matriculado_em AS quando_se_matriculou # Podemos utilizar o AS para mudar o nome na consulta
@@ -72,7 +72,7 @@ SELECT * FROM aluno
 WHERE nome != 'Diogo' # Dados com nome diferente de 'Diogo'.
 ```
 
-- Ao utilizarmos o LIKE podemos aplicar dois operadores especiais: o _ (underline) e o % (porcentagem)
+Ao utilizarmos o LIKE podemos aplicar dois operadores especiais: o _ (underline) e o % (porcentagem)
 ```sql
 SELECT * FROM aluno
 WHERE nome LIKE 'Di_go' # O _ (underline) significa "qualquer caractere naquela posição".   
