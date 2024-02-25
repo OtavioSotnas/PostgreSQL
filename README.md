@@ -17,7 +17,7 @@
 
 Para criar uma tabela: 
 
-```
+```sql
 CREATE TABLE aluno(
 	id SERIAL, 
 	nome VARCHAR(255),
