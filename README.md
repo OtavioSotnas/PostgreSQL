@@ -17,7 +17,7 @@
 
 Para criar uma tabela: 
 
-'''
+```
 CREATE TABLE aluno(
 	id SERIAL, 
 	nome VARCHAR(255),
@@ -31,4 +31,4 @@ CREATE TABLE aluno(
 	hora_aula TIME,
 	matriculado_em TIMESTAMP
 );
-'''
+```
