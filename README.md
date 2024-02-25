@@ -14,3 +14,21 @@
 | date | Data sem o tempo do dia | Data de nascimento | '2003-06-02' |
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
+
+Para criar uma tabela: 
+
+'''
+CREATE TABLE aluno(
+	id SERIAL, 
+	nome VARCHAR(255),
+	cpf CHAR(11),
+	observacao TEXT,
+	idade INTEGER,
+	renda NUMERIC(10,2),
+	altura REAL,
+	ativo BOOLEAN,
+	data_nascimento DATE,
+	hora_aula TIME,
+	matriculado_em TIMESTAMP
+);
+'''
