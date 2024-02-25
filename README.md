@@ -28,29 +28,21 @@ CREATE TABLE aluno(
 
 **Inserindo um dado na tabela:**
 ```sql
-INSERT INTO aluno(
-	nome, 
-	cpf,
-	idade,
-	ativo,
-) 
-VALUES (
-	'Otávio',
-	'12345678901',
-	20,
-	TRUE
-)
+INSERT INTO aluno(nome, cpf, idade, ativo) 
+VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
-**Modificando um dado na tabela:**
+**Modificando um dado:**
 ```sql
-SELECT * 
-	FROM aluno
+SELECT * FROM aluno
 WHERE id = 1
 
 UPDATE aluno
-	SET nome = 'Marianna',
-	cpf = '10987654321',
-	idade = '20',
-	ativo = FALSE
+	SET nome = 'Marianna', cpf = '10987654321', idade = '20', ativo = FALSE
 WHERE id = 1
+```
+**Excluindo um dado:**
+```sql
+DELETE 
+	FROM aluno
+	WHERE nome = 'Marianna';
 ```
