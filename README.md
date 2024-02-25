@@ -50,14 +50,14 @@ DELETE
 
 ## Selecionando colunas específicas da tabela:
 
+O asterísco retorna todas colunas da tabela
 ```sql
--- O * retorna todas colunas da tabela
 SELECT * FROM aluno 
 ```
+
+Desta maneira retorna só as colunas que passarmos
 ```sql
--- Desta maneira retorna só as colunas que passarmos
-SELECT nome AS "Nome do aluno", -- Podemos utilizar o AS para mudar o nome na consulta
-       idade,
-       matriculado_em AS quando_se_matriculou
+SELECT nome AS "Nome do aluno", 
+matriculado_em AS quando_se_matriculou -- Podemos utilizar o AS para mudar o nome na consulta
 FROM aluno
 ```
