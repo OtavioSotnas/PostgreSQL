@@ -102,7 +102,7 @@ SELECT * FROM aluno
 WHERE idade BETWEEN 10 AND 20; # Idade do aluno entre 10 e 20.
 ```
 
-### **Filtrando registros do tipo Booleano
+### **Filtrando registros do tipo Booleano**
 ```sql
 SELECT * FROM aluno
 WHERE ativo = true # Retorna todos True.
@@ -111,7 +111,7 @@ SELECT * FROM aluno # Retorna todos False.
 WHERE ativo = false
 ```
 
-### **Filtrando registros do tipo Null
+### **Filtrando registros do tipo Null**
 ```sql
 SELECT * FROM aluno
 WHERE cpf IS NULL # Retorna todos os nulos.
