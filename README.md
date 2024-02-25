@@ -52,4 +52,5 @@ UPDATE aluno
 	cpf = '10987654321',
 	idade = '20',
 	ativo = FALSE
+WHERE id = 1
 ```
