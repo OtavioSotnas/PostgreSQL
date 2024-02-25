@@ -58,7 +58,7 @@ SELECT * FROM aluno
 - Desta maneira retorna só as colunas que passarmos
 ```sql
 SELECT nome AS "Nome do aluno", 
-matriculado_em AS quando_se_matriculou -- Podemos utilizar o AS para mudar o nome na consulta
+matriculado_em AS quando_se_matriculou # Podemos utilizar o AS para mudar o nome na consulta
 FROM aluno
 ```
 
@@ -66,20 +66,20 @@ FROM aluno
 
 ```sql
 SELECT * FROM aluno
-WHERE nome = 'Diogo' -- dados com nome igual a 'Diogo'.
+WHERE nome = 'Diogo' # Dados com nome igual a 'Diogo'.
 
 SELECT * FROM aluno
-WHERE nome != 'Diogo' -- dados com nome diferente de 'Diogo'.
+WHERE nome != 'Diogo' # Dados com nome diferente de 'Diogo'.
 ```
 
 - Ao utilizarmos o LIKE podemos aplicar dois operadores especiais: o _ (underline) e o % (porcentagem)
 ```sql
 SELECT * FROM aluno
-WHERE nome LIKE 'Di_go' -- o _ significa "qualquer caractere naquela posição".   
+WHERE nome LIKE 'Di_go' # O _ (underline) significa "qualquer caractere naquela posição".   
 
 SELECT * FROM aluno
-WHERE nome LIKE 'D%' # dados que começam com 'D' e com qualquer caracter depois.
+WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois.
 
 SELECT * FROM aluno
-WHERE nome LIKE '%s' -- dados que possuem qualquer caracter mas terminem com 's'.
+WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
 ```
