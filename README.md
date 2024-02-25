@@ -83,7 +83,7 @@ WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois
 SELECT * FROM aluno
 WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
 ```
-### **Filtrando registros do tipo númerico
+### **Filtrando registros do tipo númerico**
 
 ```sql
 SELECT * FROM aluno
