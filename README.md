@@ -1,6 +1,6 @@
 # PostgreSQL
 
-- Tipos de dados:
+- **Tipos de dados:**
 
 | Nome | Descrição | Exemplo | Formatação |
 | ------- | ------- | ------- | ------- |
