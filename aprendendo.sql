@@ -2,17 +2,18 @@ integer
 real
 serial
 numeric
-
+----------
 varchar(n)
 char(n)
 text
-
+----------
 boolean
-
+----------
 date
 time
 timestamp
-
+----------
+	
 CREATE TABLE aluno(
 	id SERIAL, 
 	nome VARCHAR(255),
@@ -44,7 +45,7 @@ INSERT INTO aluno (
 VALUES (
 	'Otávio',
 	'12345678901',
-	'orem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, augue eget cursus suscipit, purus felis efficitur arcu, molestie fringilla odio ipsum id mi. Sed et consectetur lacus. Mauris libero magna, ultrices a ex a, elementum ullamcorper nisi. Donec euismod maximus mauris. Proin sapien mauris, rhoncus et facilisis mollis, viverra id magna. Nam at venenatis velit, quis congue ante. Nam lectus velit, facilisis in congue vel, feugiat nec nibh. Aenean bibendum nulla elit, at tincidunt mauris gravida eget. Nulla in metus elementum, ultrices nisi eget, accumsan risus. Nunc ac diam arcu. Vivamus ultrices est enim, eu sollicitudin enim tempor dapibus. Praesent tempus diam a elit dapibus, eu gravida augue lobortis. Donec luctus nibh ut arcu tempus varius. Pellentesque fermentum feugiat bibendum. Mauris diam ex, maximus non ex aliquam, rutrum tempor dolor. Morbi varius bibendum dolor et bibendum.',
+	'teste.',
 	20,
 	1400.50,
 	1.79,
