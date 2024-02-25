@@ -83,3 +83,37 @@ WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois
 SELECT * FROM aluno
 WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
 ```
+### **Filtrando registros do tipo númerico, data e boolean**
+
+```sql
+SELECT * FROM aluno
+WHERE idade = 20; # Idade do aluno igual a 20.
+
+SELECT * FROM aluno
+WHERE idade != 20; # Idade do aluno diferente de 20.
+
+SELECT * FROM aluno
+WHERE idade > 20; # Idade do aluno maior que 20.
+
+SELECT * FROM aluno
+WHERE idade < 20; # Idade do aluno menor que 20.
+
+SELECT * FROM aluno
+WHERE idade BETWEEN 10 AND 20; # Idade do aluno entre 10 e 20.
+```
+
+```sql
+SELECT * FROM aluno
+WHERE cpf IS NULL # Retorna todos os nulos.
+
+SELECT * FROM aluno
+WHERE cpf IS NOT NULL # Retorna todos não nulos.
+```
+
+```sql
+SELECT * FROM aluno
+WHERE ativo = true # Retorna todos True.
+
+SELECT * FROM aluno # Retorna todos False.
+WHERE ativo = false
+```
