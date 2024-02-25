@@ -78,7 +78,7 @@ SELECT * FROM aluno
 WHERE nome LIKE 'Di_go' -- o _ significa "qualquer caractere naquela posição".   
 
 SELECT * FROM aluno
-WHERE nome LIKE 'D%' -- dados que começam com 'D' e com qualquer caracter depois.
+WHERE nome LIKE 'D%' # dados que começam com 'D' e com qualquer caracter depois.
 
 SELECT * FROM aluno
 WHERE nome LIKE '%s' -- dados que possuem qualquer caracter mas terminem com 's'.
