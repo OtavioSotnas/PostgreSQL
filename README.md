@@ -83,7 +83,7 @@ WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois
 SELECT * FROM aluno
 WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
 ```
-### **Filtrando registros do tipo númerico, data e boolean**
+### **Filtrando registros do tipo númerico
 
 ```sql
 SELECT * FROM aluno
@@ -102,6 +102,16 @@ SELECT * FROM aluno
 WHERE idade BETWEEN 10 AND 20; # Idade do aluno entre 10 e 20.
 ```
 
+### **Filtrando registros do tipo Booleano
+```sql
+SELECT * FROM aluno
+WHERE ativo = true # Retorna todos True.
+
+SELECT * FROM aluno # Retorna todos False.
+WHERE ativo = false
+```
+
+### **Filtrando registros do tipo Null
 ```sql
 SELECT * FROM aluno
 WHERE cpf IS NULL # Retorna todos os nulos.
@@ -110,10 +120,4 @@ SELECT * FROM aluno
 WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
-```sql
-SELECT * FROM aluno
-WHERE ativo = true # Retorna todos True.
 
-SELECT * FROM aluno # Retorna todos False.
-WHERE ativo = false
-```
