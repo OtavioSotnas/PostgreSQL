@@ -45,6 +45,7 @@ DELETE
 ```
 
 **Selecionando colunas específicas da tabela:**
+
 O * retorna todas colunas da tabela
 ```sql
 SELECT * FROM aluno 
