@@ -15,6 +15,8 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
+# Executando Operações
+
 **Para criar uma tabela:** 
 ```sql
 CREATE TABLE aluno (
@@ -44,7 +46,9 @@ DELETE
   WHERE nome = 'Marianna';
 ```
 
-**Selecionando colunas específicas da tabela:**
+# Consultas com Filtros
+
+## Selecionando colunas específicas da tabela:**
 
 ```sql
 -- O * retorna todas colunas da tabela
