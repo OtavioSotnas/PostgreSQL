@@ -41,3 +41,15 @@ VALUES (
 	TRUE
 )
 ```
+**Modificando um dado na tabela:**
+```sql
+SELECT * 
+	FROM aluno
+WHERE id = 1
+
+UPDATE aluno
+	SET nome = 'Marianna',
+	cpf = '10987654321',
+	idade = '20',
+	ativo = FALSE
+```
