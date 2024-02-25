@@ -17,7 +17,7 @@
 
 # Executando Operações
 
-**Para criar uma tabela:** 
+## Para criar uma tabela:*
 ```sql
 CREATE TABLE aluno (
 	id SERIAL, 
@@ -28,18 +28,18 @@ CREATE TABLE aluno (
 );
 ```
 
-**Inserindo um dado na tabela:**
+## Inserindo um dado na tabela:
 ```sql
 INSERT INTO aluno (nome, cpf, idade, ativo) 
   VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
-**Modificando um dado:**
+## Modificando um dado:
 ```sql
 UPDATE aluno
   SET nome = 'Marianna', cpf = '10987654321', idade = '20', ativo = FALSE
   WHERE id = 1
 ```
-**Excluindo um dado:**
+## Excluindo um dado:
 ```sql
 DELETE 
   FROM aluno
@@ -48,7 +48,7 @@ DELETE
 
 # Consultas com Filtros
 
-## Selecionando colunas específicas da tabela:**
+## Selecionando colunas específicas da tabela:
 
 ```sql
 -- O * retorna todas colunas da tabela
