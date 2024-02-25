@@ -46,10 +46,12 @@ DELETE
 
 **Selecionando colunas específicas da tabela:**
 ```sql
-SELECT * FROM aluno -- O * retorna todas colunas da tabela
+-- O * retorna todas colunas da tabela
+SELECT * FROM aluno 
 ```
 ```sql
-SELECT nome, idade
-FROM aluno
 -- Desta maneira retorna só as colunas que passarmos
+SELECT nome AS "Nome do aluno", -- Podemos utilizar o AS para mudar o nome na consulta
+       idade
+FROM aluno
 ```
