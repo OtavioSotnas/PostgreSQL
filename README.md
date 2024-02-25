@@ -25,7 +25,7 @@ CREATE TABLE aluno (
 	cpf CHAR(11),
 	idade INTEGER,
 	ativo BOOLEAN
-);
+)
 ```
 
 ### **Inserindo um dado na tabela:**
@@ -43,7 +43,7 @@ UPDATE aluno
 ```sql
 DELETE 
   FROM aluno
-  WHERE nome = 'Marianna';
+  WHERE nome = 'Marianna'
 ```
 
 ## **Consultas com Filtros**
