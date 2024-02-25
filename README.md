@@ -17,7 +17,7 @@
 
 # Executando Operações
 
-## Para criar uma tabela:*
+## Para criar uma tabela:
 ```sql
 CREATE TABLE aluno (
 	id SERIAL, 
