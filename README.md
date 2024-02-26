@@ -120,4 +120,5 @@ SELECT * FROM aluno
 WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
-
+```sql
+```
