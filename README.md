@@ -15,8 +15,7 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
-<p style="color:red">Executando Operações</p>
-
+## **EXECUTANDO OPERAÇÕES**
 
 ### **Para criar uma tabela:**
 ```sql
@@ -47,9 +46,9 @@ DELETE
   WHERE nome = 'Marianna'
 ```
 
-## **Consultas com Filtros**
+## **CONSULTAS COM FILTROS**
 
-### **Selecionando colunas específicas da tabela:**
+**Selecionando colunas específicas da tabela:**
 
 O asterísco retorna todas colunas da tabela
 ```sql
