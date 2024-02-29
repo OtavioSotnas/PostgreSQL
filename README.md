@@ -132,7 +132,7 @@ CREATE TABLE curso (
 FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
 REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
 
-CREATE TABLE aluno_curso (
+CREATE TABLE turma (
     aluno_id INTEGER,
     curso_id INTEGER,
     PRIMARY KEY (aluno_id, curso_id),
@@ -143,5 +143,8 @@ CREATE TABLE aluno_curso (
 
 ### 3.2 Consultas com relacionamentos
 ```sql
-
+SELECT *
+  FROM aluno
+  JOIN turma ON turma.aluno_id = aluno.id
+-- Junta a tabela turma onde a variável aluno_id = variável id da tabela aluno
 ```
