@@ -15,9 +15,9 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
-## **EXECUTANDO OPERAÇÕES**
+## **1. EXECUTANDO OPERAÇÕES**
 
-### **Para criar uma tabela:**
+### 1.1 Para criar uma tabela:
 ```sql
 CREATE TABLE aluno (
 	id SERIAL, 
@@ -27,28 +27,27 @@ CREATE TABLE aluno (
 	ativo BOOLEAN
 )
 ```
-
-### **Inserindo um dado na tabela:**
+### 1.2 Inserindo um dado na tabela:
 ```sql
 INSERT INTO aluno (nome, cpf, idade, ativo) 
   VALUES ('Otávio', '12345678901', 20, TRUE)
 ```
-### **Modificando um dado:** 
+### 1.3 Modificando um dado:
 ```sql
 UPDATE aluno
   SET nome = 'Marianna', cpf = '10987654321', idade = '20', ativo = FALSE
   WHERE id = 1
 ```
-### **Excluindo um dado:**
+### 1.4 Excluindo um dado:
 ```sql
 DELETE 
   FROM aluno
   WHERE nome = 'Marianna'
 ```
 
-## **CONSULTAS COM FILTROS**
+## **2. CONSULTAS COM FILTROS**
 
-**Selecionando colunas específicas da tabela:**
+### 2.1 Selecionando colunas específicas da tabela:
 
 O asterísco retorna todas colunas da tabela
 ```sql
@@ -62,7 +61,7 @@ matriculado_em AS quando_se_matriculou # Podemos utilizar o AS para mudar o nome
 FROM aluno
 ```
 
-### **Filtrando registros do tipo texto**
+### 2.2 Filtrando registros do tipo texto
 
 ```sql
 SELECT * FROM aluno
@@ -83,7 +82,7 @@ WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois
 SELECT * FROM aluno
 WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
 ```
-### **Filtrando registros do tipo númerico**
+### 2.3 Filtrando registros do tipo númerico
 
 ```sql
 SELECT * FROM aluno
@@ -102,7 +101,7 @@ SELECT * FROM aluno
 WHERE idade BETWEEN 10 AND 20; # Idade do aluno entre 10 e 20.
 ```
 
-### **Filtrando registros do tipo Booleano**
+### 2.4 Filtrando registros do tipo Booleano
 ```sql
 SELECT * FROM aluno
 WHERE ativo = true # Retorna todos True.
@@ -111,7 +110,7 @@ SELECT * FROM aluno # Retorna todos False.
 WHERE ativo = false
 ```
 
-### **Filtrando registros do tipo Null**
+### 2.5 Filtrando registros do tipo Null
 ```sql
 SELECT * FROM aluno
 WHERE cpf IS NULL # Retorna todos os nulos.
@@ -121,9 +120,9 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
 
-## **Trabalhando com relacionamentos**
+## 3. Trabalhando com relacionamentos
 
-### Chave-Primária
+### 3.1 Chave-Primária
 ```sql
 CREATE TABLE curso (
     id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
