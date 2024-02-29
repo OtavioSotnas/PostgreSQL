@@ -70,7 +70,6 @@ WHERE nome != 'Diogo' # Dados com nome diferente de 'Diogo'.
 ```
 
 ```sql
--- Ao utilizarmos o LIKE podemos aplicar dois operadores especiais: o _ (underline) e o % (porcentagem)
 SELECT * FROM aluno
 WHERE nome LIKE 'Di_go' # O _ (underline) significa "qualquer caractere naquela posição".   
 
