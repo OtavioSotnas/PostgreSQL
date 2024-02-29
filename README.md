@@ -118,7 +118,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
 
-## 3. Trabalhando com relacionamentos
+## 3. TRABALHANDO COM RELACIONAMENTOS
 
 ### 3.1 Chave-Primária
 ```sql
@@ -128,8 +128,13 @@ CREATE TABLE curso (
 );
 ```
 
-### Chave-Estrangeira
+### 3.2 Chave-Estrangeira
 ```sql
 FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
 REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
+```
+
+### 3.2 Consultas com relacionamentos
+```sql
+
 ```
