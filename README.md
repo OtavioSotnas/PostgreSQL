@@ -15,7 +15,7 @@
 | time | Tempo do dia sem a data | Horário de chegada | '19:02:50' |
 | timestamp | Data e tempo do dia | Acontecimento de algo | '2020-02-05 12:00:00' |
 
-## **Executando Operações**
+## **Executando Operações** #f03c15
 
 ### **Para criar uma tabela:**
 ```sql
@@ -120,5 +120,19 @@ SELECT * FROM aluno
 WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
+
+## **Trabalhando com relacionamentos**
+
+### Chave-Primária
 ```sql
+CREATE TABLE curso (
+    id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
+        nome VARCHAR(255) NOT NULL
+);
+```
+
+### Chave-Estrangeira
+```sql
+FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
+REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
 ```
