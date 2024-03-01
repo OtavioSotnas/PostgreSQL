@@ -228,3 +228,15 @@ SELECT *
   ORDER BY id
   OFFSET 1 # Pulara o primeiro registro
 ```
+
+### 5.3 Funções de agregação
+```sql
+SELECT
+  COUNT(id), -- Retorna a quantidade de registros
+  SUM(id), -- Retorna a soma dos registros
+  MAX(id), -- Retorna o maior valor dos registros
+  MIN(id), -- Retorna o menor valor dos registros
+  AVG(id) -- Retorna a média dos registros
+  ROUND(AVG(id),0) -- Arredonda o resultado
+FROM funcionarios
+```
