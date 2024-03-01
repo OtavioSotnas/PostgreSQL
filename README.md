@@ -124,7 +124,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 
 ## 3. TRABALHANDO COM RELACIONAMENTOS
 
-### 3.1 Primary Key
+### 3.1 Primary-Key
 ```sql
 CREATE TABLE curso (
     id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
@@ -132,7 +132,7 @@ CREATE TABLE curso (
 )
 ```
 
-### 3.2 Foreign Key
+### 3.2 Foreign-Key
 ```sql
 FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
 REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
