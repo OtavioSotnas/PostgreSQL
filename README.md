@@ -213,3 +213,18 @@ SELECT *
   FROM funcionarios
   ORDER BY nome, matricula
 ```
+
+### 5.2 Limitando consultas
+
+```sql
+-- LIMIT limita quantos registros serão exibidos
+SELECT *
+  FROM funcionarios
+  LIMIT 5 # Somente 5 serão exibidos
+
+-- OFFSET pula linhas antes de exibir a busca
+SELECT *
+  FROM funcionarios
+  ORDER BY id
+  OFFSET 1 # Pulara o primeiro registro
+```
