@@ -124,7 +124,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 
 ## 3. TRABALHANDO COM RELACIONAMENTOS
 
-### 3.1 PRIMARY KEY
+### 3.1 Primary Key
 ```sql
 CREATE TABLE curso (
     id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
@@ -132,7 +132,7 @@ CREATE TABLE curso (
 )
 ```
 
-### 3.2 FOREIGN KEY
+### 3.2 Foreign Key
 ```sql
 FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
 REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
@@ -147,7 +147,7 @@ CREATE TABLE turma (
     REFERENCES aluno (id),
 ```
 
-### 3.3 JOIN, LEFT, RIGHT e FULL JOIN
+### 3.3 Join, Left, Right and Full Join
 ```sql
 -- Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
 SELECT *
@@ -182,7 +182,7 @@ FULL JOIN curso ON curso.id = aluno_curso.curso_id
 
 ## 4. USANDO CASCADE
 
-### 4.1 DELETE and UPDATE CASCADE
+### 4.1 Delete and Uptade Cascade
 
 ```sql
 -- Por padrão, chaves estrangeiras impedem que você exclua
@@ -201,7 +201,7 @@ FOREIGN KEY (aluno_id)
 
 ## 5. AVANÇANDO COM CONSULTAS
 
-### 5.1 ORDER BY
+### 5.1 Order by
 
 ```sql
 -- Ordena a tabela funcionários pelo nome em ordem alfabética
@@ -220,7 +220,7 @@ SELECT *
   ORDER BY nome, matricula
 ```
 
-### 5.2 LIMIT and OFFSET
+### 5.2 Limit e Offset
 
 ```sql
 -- LIMIT limita quantos registros serão exibidos
@@ -246,4 +246,22 @@ SELECT
   ROUND(AVG(id),0) -- Arredonda o resultado
 FROM funcionarios
 ```
-### 5.3 Agrupando consultas
+### 5.4 Distinct e Group by
+
+```sql
+-- Garante que os dados do campo solicitado não se repitam
+SELECT DISTINCT
+        nome
+  FROM funcionarios
+  ORDER BY nome;
+```
+```sql
+-- Faz o agrupamento para usar um comando de agregação junto
+SELECT
+       nome,
+       sobrenome,
+       COUNT(*)
+  FROM funcionarios
+  GROUP BY nome, sobrenome
+  ORDER BY nome;
+```
