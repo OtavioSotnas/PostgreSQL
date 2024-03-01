@@ -141,10 +141,34 @@ CREATE TABLE turma (
     REFERENCES aluno (id),
 ```
 
-### 3.2 Consultas com relacionamentos
+### 3.3 Consultas com relacionamentos
 ```sql
+-- Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
 SELECT *
   FROM aluno
   JOIN turma ON turma.aluno_id = aluno.id
--- Junta a tabela turma onde a variável aluno_id = variável id da tabela aluno
+
+-- Junta a tabela aluno com turma e curso e retorna tambem alunos,
+-- tabela da esquerda (aluno), que não tem um curso
+SELECT aluno.nome as "Nome do Aluno",
+        curso.nome as "Nome do Curso"
+    FROM aluno
+LEFT JOIN turma ON turma.aluno_id = aluno.id
+LEFT JOIN curso ON curso.id = turma.curso_id
+
+-- Junta a tabela aluno com turma e curso e retorna tambem cursos,
+-- tabela da direita (cursos), que não tem alunos.
+SELECT aluno.nome as "Nome do Aluno",
+        curso.nome as "Nome do Curso"
+    FROM aluno
+RIGHT JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
+RIGHT JOIN curso ON curso.id = aluno_curso.curso_id
+
+-- Retorna todos dados, mesmo eles não tendo correspondência
+-- nas outras tabelas
+SELECT aluno.nome as "Nome do Aluno",
+        curso.nome as "Nome do Curso"
+    FROM aluno
+FULL JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
+FULL JOIN curso ON curso.id = aluno_curso.curso_id
 ```
