@@ -124,7 +124,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 CREATE TABLE curso (
     id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
         nome VARCHAR(255) NOT NULL
-);
+)
 ```
 
 ### 3.2 Chave-Estrangeira
