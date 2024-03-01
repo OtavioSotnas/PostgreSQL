@@ -45,6 +45,11 @@ DELETE
   WHERE nome = 'Marianna'
 ```
 
+### 1.5 Excluindo uma tabela:
+```sql
+DROP TABLE aluno
+```
+
 ## **2. CONSULTAS COM FILTROS**
 
 ### 2.1 Selecionando colunas específicas da tabela:
@@ -119,7 +124,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 
 ## 3. TRABALHANDO COM RELACIONAMENTOS
 
-### 3.1 Chave-Primária
+### 3.1 PRIMARY KEY
 ```sql
 CREATE TABLE curso (
     id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
@@ -127,7 +132,7 @@ CREATE TABLE curso (
 )
 ```
 
-### 3.2 Chave-Estrangeira
+### 3.2 FOREIGN KEY
 ```sql
 FOREIGN KEY (CAMPO_NA_TABELA_ORIGEM)
 REFERENCES TABELA_DESTINO (CAMPO_NA_TABELA DESTINO)
@@ -142,7 +147,7 @@ CREATE TABLE turma (
     REFERENCES aluno (id),
 ```
 
-### 3.3 Consultas com relacionamentos
+### 3.3 JOIN, LEFT, RIGHT e FULL JOIN
 ```sql
 -- Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
 SELECT *
@@ -177,7 +182,7 @@ FULL JOIN curso ON curso.id = aluno_curso.curso_id
 
 ## 4. USANDO CASCADE
 
-### 4.1 Delete and Uptade Cascade
+### 4.1 DELETE and UPDATE CASCADE
 
 ```sql
 -- Por padrão, chaves estrangeiras impedem que você exclua
@@ -196,7 +201,7 @@ FOREIGN KEY (aluno_id)
 
 ## 5. AVANÇANDO COM CONSULTAS
 
-### 5.1 Ordenando Consultas
+### 5.1 ORDER BY
 
 ```sql
 -- Ordena a tabela funcionários pelo nome em ordem alfabética
@@ -215,7 +220,7 @@ SELECT *
   ORDER BY nome, matricula
 ```
 
-### 5.2 Limitando consultas
+### 5.2 LIMIT and OFFSET
 
 ```sql
 -- LIMIT limita quantos registros serão exibidos
@@ -241,3 +246,4 @@ SELECT
   ROUND(AVG(id),0) -- Arredonda o resultado
 FROM funcionarios
 ```
+### 5.3 Agrupando consultas
