@@ -184,13 +184,13 @@ FULL JOIN curso ON curso.id = aluno_curso.curso_id
 FOREIGN KEY (aluno_id)
   REFERENCES aluno (id)
   ON DELETE RESTRICT # Padrão
-  ON UPTADE RESTRICT # Padrão
+  ON UPDATE RESTRICT # Padrão
 
 -- Para mudar isso apenas mudamos o argumento para CASCADE
 FOREIGN KEY (aluno_id)
   REFERENCES aluno (id)
   ON DELETE CASCADE
-  ON UPTADE CASCADE
+  ON UPDATE CASCADE
 ```
 
 ## 5. AVANÇANDO COM CONSULTAS
