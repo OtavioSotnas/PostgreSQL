@@ -196,3 +196,20 @@ FOREIGN KEY (aluno_id)
 ## 5. AVANÇANDO COM CONSULTAS
 
 ### 5.1 Ordenando Consultas
+
+```sql
+-- Ordena a tabela funcionários pelo nome em ordem alfabética
+SELECT *
+  FROM funcionarios
+  ORDER BY nome
+
+-- Ordena em ordem decrescente
+SELECT *
+  FROM funcionarios
+  ORDER BY nome DESC
+
+-- Primeiro ordenma pelo nome e depois pela matricula
+SELECT *
+  FROM funcionarios
+  ORDER BY nome, matricula
+```
