@@ -157,7 +157,7 @@ LEFT JOIN turma ON turma.aluno_id = aluno.id
 LEFT JOIN curso ON curso.id = turma.curso_id
 
 -- Junta a tabela aluno com turma e curso e retorna tambem cursos,
--- tabela da direita (cursos), que não tem alunos.
+-- tabela da direita (curso), que não tem alunos.
 SELECT aluno.nome as "Nome do Aluno",
         curso.nome as "Nome do Curso"
     FROM aluno
