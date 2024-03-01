@@ -172,3 +172,27 @@ SELECT aluno.nome as "Nome do Aluno",
 FULL JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
 FULL JOIN curso ON curso.id = aluno_curso.curso_id
 ```
+
+
+## 4. USANDO CASCADE
+
+### 4.1 Delete and Uptade Cascade
+
+```sql
+-- Por padrão, chaves estrangeiras impedem que você exclua
+-- ou altere registros que existem em outras tabelas.
+FOREIGN KEY (aluno_id)
+  REFERENCES aluno (id)
+  ON DELETE RESTRICT # Padrão
+  ON UPTADE RESTRICT # Padrão
+
+-- Para mudar isso apenas mudamos o argumento para CASCADE
+FOREIGN KEY (aluno_id)
+  REFERENCES aluno (id)
+  ON DELETE CASCADE
+  ON UPTADE CASCADE
+```
+
+## 5. AVANÇANDO COM CONSULTAS
+
+### 5.1 Ordenando Consultas
