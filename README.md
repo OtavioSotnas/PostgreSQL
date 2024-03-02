@@ -257,11 +257,19 @@ SELECT DISTINCT
 ```
 ```sql
 -- Faz o agrupamento para usar um comando de agregação junto
-SELECT
-       nome,
-       sobrenome,
-       COUNT(*)
+SELECT nome, sobrenome, COUNT(*)
   FROM funcionarios
   GROUP BY nome, sobrenome
   ORDER BY nome;
+```
+
+### 5.4 Having
+
+```sql
+-- O comando Having diferente to Where, se utiliza quando
+-- formos usar comandos de agrupamento como COUNT, AVG e etc
+SELECT nome, COUNT(id)
+    FROM funcionarios
+    GROUP BY nome
+    HAVING COUNT(id) > 1;
 ```
