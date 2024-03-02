@@ -121,7 +121,6 @@ SELECT * FROM aluno
 WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ```
 
-
 ## 3. TRABALHANDO COM RELACIONAMENTOS
 
 ### 3.1 Primary-Key
@@ -147,7 +146,19 @@ CREATE TABLE turma (
     REFERENCES aluno (id),
 ```
 
-### 3.3 Join, Left, Right and Full Join
+### 3.3 Constraint Check
+```sql
+-- A constraint CHECK é usada para impor uma condição específica em uma coluna
+CREATE TABLE usuarios (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(50),
+  idade INTEGER,
+  CONSTRAINT idade_maior CHECK (idade >= 18 AND idade <= 99)
+-- Garante que a coluna "idade" tenha valores entre 18 e 99 anos
+)
+```
+
+### 3.4 Join, Left, Right and Full Join
 ```sql
 -- Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
 SELECT *
