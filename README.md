@@ -1,7 +1,9 @@
 # **PostgreSQL**
 
 Curso: https://cursos.alura.com.br/course/introducao-postgresql-primeiros-passos
+
 Apostila: https://drive.google.com/file/d/1LMFYCbAPib2nFzE4QRrLIoMkvWNnTBkX/view?usp=sharing
+
 **Tipos de dados:**
 
 | Nome | Descrição | Exemplo | Formatação |
