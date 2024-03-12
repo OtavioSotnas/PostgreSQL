@@ -59,10 +59,10 @@ DROP TABLE aluno
 ### 2.1 Selecionando colunas específicas da tabela:
 
 ```sql
--- O asterísco retorna todas colunas da tabela
+--> O asterísco retorna todas colunas da tabela
 SELECT * FROM aluno
 
--- Desta maneira retorna só as colunas que passarmos
+--> Desta maneira retorna só as colunas que passarmos
 SELECT nome AS "Nome do aluno", 
 matriculado_em AS quando_se_matriculou # Podemos utilizar o AS para mudar o nome na consulta
 FROM aluno
@@ -72,57 +72,57 @@ FROM aluno
 
 ```sql
 SELECT * FROM aluno
-WHERE nome = 'Diogo' # Dados com nome igual a 'Diogo'.
+WHERE nome = 'Diogo' --> Dados com nome igual a 'Diogo'.
 
 SELECT * FROM aluno
-WHERE nome != 'Diogo' # Dados com nome diferente de 'Diogo'.
+WHERE nome != 'Diogo' --> Dados com nome diferente de 'Diogo'.
 ```
 
 ```sql
 SELECT * FROM aluno
-WHERE nome LIKE 'Di_go' # O _ (underline) significa "qualquer caractere naquela posição".   
+WHERE nome LIKE 'Di_go' --> O _ (underline) significa "qualquer caractere naquela posição".   
 
 SELECT * FROM aluno
-WHERE nome LIKE 'D%' # Dados que começam com 'D' e com qualquer caracter depois.
+WHERE nome LIKE 'D%' --> Dados que começam com 'D' e com qualquer caracter depois.
 
 SELECT * FROM aluno
-WHERE nome LIKE '%s' # Dados que possuem qualquer caracter mas terminem com 's'.
+WHERE nome LIKE '%s' --> Dados que possuem qualquer caracter mas terminem com 's'.
 ```
 ### 2.3 Filtrando registros do tipo númerico
 
 ```sql
 SELECT * FROM aluno
-WHERE idade = 20; # Idade do aluno igual a 20.
+WHERE idade = 20; --> Idade do aluno igual a 20.
 
 SELECT * FROM aluno
-WHERE idade != 20; # Idade do aluno diferente de 20.
+WHERE idade != 20; --> Idade do aluno diferente de 20.
 
 SELECT * FROM aluno
-WHERE idade > 20; # Idade do aluno maior que 20.
+WHERE idade > 20; --> Idade do aluno maior que 20.
 
 SELECT * FROM aluno
-WHERE idade < 20; # Idade do aluno menor que 20.
+WHERE idade < 20; --> Idade do aluno menor que 20.
 
 SELECT * FROM aluno
-WHERE idade BETWEEN 10 AND 20; # Idade do aluno entre 10 e 20.
+WHERE idade BETWEEN 10 AND 20; --> Idade do aluno entre 10 e 20.
 ```
 
 ### 2.4 Filtrando registros do tipo Booleano
 ```sql
 SELECT * FROM aluno
-WHERE ativo = true # Retorna todos True.
+WHERE ativo = true --> Retorna todos True.
 
-SELECT * FROM aluno # Retorna todos False.
+SELECT * FROM aluno --> Retorna todos False.
 WHERE ativo = false
 ```
 
 ### 2.5 Filtrando registros do tipo Null
 ```sql
 SELECT * FROM aluno
-WHERE cpf IS NULL # Retorna todos os nulos.
+WHERE cpf IS NULL --> Retorna todos os nulos.
 
 SELECT * FROM aluno
-WHERE cpf IS NOT NULL # Retorna todos não nulos.
+WHERE cpf IS NOT NULL --> Retorna todos não nulos.
 ```
 
 ## 3. TRABALHANDO COM RELACIONAMENTOS
@@ -130,7 +130,7 @@ WHERE cpf IS NOT NULL # Retorna todos não nulos.
 ### 3.1 Primary-Key
 ```sql
 CREATE TABLE curso (
-    id INTEGER PRIMARY KEY, -- Representa UNIQUE e NOT NULL ao mesmo tempo
+    id INTEGER PRIMARY KEY, --> Representa UNIQUE e NOT NULL ao mesmo tempo
         nome VARCHAR(255) NOT NULL
 )
 ```
@@ -149,7 +149,7 @@ CREATE TABLE turma (
     FOREIGN KEY (aluno_id)
     REFERENCES aluno (id),
 
--- Outra sintaxe para FOREIGN KEY
+--> Outra sintaxe para FOREIGN KEY
 CREATE TABLE turma (
 	aluno_id INTEGER NOT NULL REFERENCES aluno(id),
 	curso_id INTEGER NOT NULL REFERENCES curso(id),
@@ -159,24 +159,24 @@ CREATE TABLE turma (
 
 ### 3.3 Constraint Check
 ```sql
--- A constraint CHECK é usada para impor uma condição específica em uma coluna
+--> A constraint CHECK é usada para impor uma condição específica em uma coluna
 CREATE TABLE usuarios (
   id SERIAL PRIMARY KEY,
   nome VARCHAR(50),
   idade INTEGER,
   CONSTRAINT idade_maior CHECK (idade >= 18 AND idade <= 99)
--- Garante que a coluna "idade" tenha valores entre 18 e 99 anos
+--> Garante que a coluna "idade" tenha valores entre 18 e 99 anos
 )
 ```
 
 ### 3.4 Join, Left, Right and Full Join
 ```sql
--- Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
+--> Junta a tabela aluno com a turma onde a variável aluno_id = variável id da tabela aluno
 SELECT *
   FROM aluno
   JOIN turma ON turma.aluno_id = aluno.id
 
--- Junta a tabela aluno com turma e curso e retorna tambem alunos,
+--> Junta a tabela aluno com turma e curso e retorna tambem alunos,
 -- tabela da esquerda (aluno), que não tem um curso
 SELECT aluno.nome as "Nome do Aluno",
         curso.nome as "Nome do Curso"
@@ -184,7 +184,7 @@ SELECT aluno.nome as "Nome do Aluno",
 LEFT JOIN turma ON turma.aluno_id = aluno.id
 LEFT JOIN curso ON curso.id = turma.curso_id
 
--- Junta a tabela aluno com turma e curso e retorna tambem cursos,
+--> Junta a tabela aluno com turma e curso e retorna tambem cursos,
 -- tabela da direita (curso), que não tem alunos.
 SELECT aluno.nome as "Nome do Aluno",
         curso.nome as "Nome do Curso"
@@ -192,7 +192,7 @@ SELECT aluno.nome as "Nome do Aluno",
 RIGHT JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
 RIGHT JOIN curso ON curso.id = aluno_curso.curso_id
 
--- Retorna todos dados, mesmo eles não tendo correspondência
+--> Retorna todos dados, mesmo eles não tendo correspondência
 -- nas outras tabelas
 SELECT aluno.nome as "Nome do Aluno",
         curso.nome as "Nome do Curso"
@@ -207,14 +207,14 @@ FULL JOIN curso ON curso.id = aluno_curso.curso_id
 ### 4.1 Delete and Uptade Cascade
 
 ```sql
--- Por padrão, chaves estrangeiras impedem que você exclua
+--> Por padrão, chaves estrangeiras impedem que você exclua
 -- ou altere registros que existem em outras tabelas.
 FOREIGN KEY (aluno_id)
   REFERENCES aluno (id)
   ON DELETE RESTRICT # Padrão
   ON UPDATE RESTRICT # Padrão
 
--- Para mudar isso apenas mudamos o argumento para CASCADE
+--> Para mudar isso apenas mudamos o argumento para CASCADE
 FOREIGN KEY (aluno_id)
   REFERENCES aluno (id)
   ON DELETE CASCADE
@@ -226,17 +226,17 @@ FOREIGN KEY (aluno_id)
 ### 5.1 Order by
 
 ```sql
--- Ordena a tabela funcionários pelo nome em ordem alfabética
+--> Ordena a tabela funcionários pelo nome em ordem alfabética
 SELECT *
   FROM funcionarios
   ORDER BY nome
 
--- Ordena em ordem decrescente
+--> Ordena em ordem decrescente
 SELECT *
   FROM funcionarios
   ORDER BY nome DESC
 
--- Primeiro ordenma pelo nome e depois pela matricula
+--> Primeiro ordena pelo nome e depois pela matricula
 SELECT *
   FROM funcionarios
   ORDER BY nome, matricula
@@ -245,12 +245,12 @@ SELECT *
 ### 5.2 Limit e Offset
 
 ```sql
--- LIMIT limita quantos registros serão exibidos
+--> LIMIT limita quantos registros serão exibidos
 SELECT *
   FROM funcionarios
   LIMIT 5 # Somente 5 serão exibidos
 
--- OFFSET pula linhas antes de exibir a busca
+--> OFFSET pula linhas antes de exibir a busca
 SELECT *
   FROM funcionarios
   ORDER BY id
@@ -260,25 +260,25 @@ SELECT *
 ### 5.3 Funções de agregação
 ```sql
 SELECT
-  COUNT(id), -- Retorna a quantidade de registros
-  SUM(id), -- Retorna a soma dos registros
-  MAX(id), -- Retorna o maior valor dos registros
-  MIN(id), -- Retorna o menor valor dos registros
-  AVG(id) -- Retorna a média dos registros
-  ROUND(AVG(id),0) -- Arredonda o resultado
+  COUNT(id), --> Retorna a quantidade de registros
+  SUM(id), --> Retorna a soma dos registros
+  MAX(id), --> Retorna o maior valor dos registros
+  MIN(id), --> Retorna o menor valor dos registros
+  AVG(id) --> Retorna a média dos registros
+  ROUND(AVG(id),0) --> Arredonda o resultado
 FROM funcionarios
 ```
 ### 5.4 Distinct e Group by
 
 ```sql
--- Garante que os dados do campo solicitado não se repitam
+--> Garante que os dados do campo solicitado não se repitam
 SELECT DISTINCT
         nome
   FROM funcionarios
   ORDER BY nome;
 ```
 ```sql
--- Faz o agrupamento para usar um comando de agregação junto
+--> Faz o agrupamento para usar um comando de agregação junto
 SELECT nome, sobrenome, COUNT(*)
   FROM funcionarios
   GROUP BY nome, sobrenome
@@ -288,7 +288,7 @@ SELECT nome, sobrenome, COUNT(*)
 ### 5.4 Having
 
 ```sql
--- O comando Having diferente to Where, se utiliza quando
+--> O comando Having diferente to Where, se utiliza quando
 -- formos usar comandos de agrupamento como COUNT, AVG e etc
 SELECT nome, COUNT(id)
     FROM funcionarios
@@ -307,7 +307,7 @@ SELECT * FROM curso WHERE categoria_id IN (1,2)
 ### 6.2 Sub-query com IN
 
 ```sql
--- Retorna todos os cursos onde a categoria não tenha espaço
+--> Retorna todos os cursos onde a categoria não tenha espaço
 SELECT * FROM curso WHERE categoria_id IN (
     SELECT id FROM categoria WHERE nome NOT LIKE ('% %')
 )
@@ -316,7 +316,7 @@ SELECT * FROM curso WHERE categoria_id IN (
 ### 6.2 Sub-query com FROM
 
 ```sql
--- A 1º query retorna uma tabela e utilizamos ela para manipular novamente
+--> A 1º query retorna uma tabela e utilizamos ela para manipular novamente
 SELECT categoria, numero_cursos
 FROM (
   SELECT categoria.nome AS categoria,
@@ -333,35 +333,35 @@ WHERE numero_cursos > 3;
 ### 7.1 Funções de String
 
 ```sql
-LENGTH(primeiro_nome) -- Mede o tamanho das palavras
-UPPER(primeiro_nome) -- Deixa tudo maiúsculo
-LOWER(primeiro_nome) -- Deixa tudo minúsculo
-INITCAP(ultimo_nome) -- Deixa primeiras letras maiúsculas 
-(primeiro_nome || ' ' || ultimo_nome)  -- Concatena os nomes
-CONCAT(primeiro_nome, ' ', ultimo_nome) -- Concatena também (mas deixa nulos vazios)
-LEFT(endereco, 3)  -- Pega as 3 primeiras letras 
-RIGHT(endereco, 5) -- Pega as 5 últimas letras
+LENGTH(primeiro_nome) --> Mede o tamanho das palavras
+UPPER(primeiro_nome) --> Deixa tudo maiúsculo
+LOWER(primeiro_nome) --> Deixa tudo minúsculo
+INITCAP(ultimo_nome) --> Deixa primeiras letras maiúsculas 
+(primeiro_nome || ' ' || ultimo_nome)  --> Concatena os nomes
+CONCAT(primeiro_nome, ' ', ultimo_nome) --> Concatena também (mas deixa nulos vazios)
+LEFT(endereco, 3)  --> Pega as 3 primeiras letras 
+RIGHT(endereco, 5) --> Pega as 5 últimas letras
 ```
 
 ### 7.1 Funções Numéricas
 
 ```sql
-DIV(valor, 2) -- Divisão 
-POWER(valor, 2) -- Potência
-SQRT(valor) -- Raiz
-LOG(valor) -- Logarítimo base 10
-EXP(valor) -- Exp do número
-PI() -- Constante pi
+DIV(valor, 2) --> Divisão 
+POWER(valor, 2) --> Potência
+SQRT(valor) --> Raiz
+LOG(valor) --> Logarítimo base 10
+EXP(valor) --> Exp do número
+PI() --> Constante pi
 ```
 
 ### 7.1 Funções de Data
 
 ```sql
-EXTRACT(day FROM data) -- Extrai a parte específica de uma data
-EXTRACT(month FROM data) -- Extrai o mês
-EXTRACT(year FROM data) -- Extrai o ano
-NOW() -- Pega o timestamp de agora 
-AGE(data) -- Calcula (NOW() - data)
-CURRENT_DATE -- Pega a data atual
+EXTRACT(day FROM data) --> Extrai a parte específica de uma data
+EXTRACT(month FROM data) --> Extrai o mês
+EXTRACT(year FROM data) --> Extrai o ano
+NOW() --> Pega o timestamp de agora 
+AGE(data) --> Calcula (NOW() - data)
+CURRENT_DATE --> Pega a data atual
 CURRENT_TIME --> Pega a hora atual
 ```
