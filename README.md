@@ -342,3 +342,26 @@ CONCAT(primeiro_nome, ' ', ultimo_nome) -- Concatena também (mas deixa nulos va
 LEFT(endereco, 3)  -- Pega as 3 primeiras letras 
 RIGHT(endereco, 5) -- Pega as 5 últimas letras
 ```
+
+### 7.1 Funções Numéricas
+
+```sql
+DIV(valor, 2) -- Divisão 
+POWER(valor, 2) -- Potência
+SQRT(valor) -- Raiz
+LOG(valor) -- Logarítimo base 10
+EXP(valor) -- Exp do número
+PI() -- Constante pi
+```
+
+### 7.1 Funções de Data
+
+```sql
+EXTRACT(day FROM data) -> Extrai a parte específica de uma data
+EXTRACT(month FROM data) -> Extrai o mês
+EXTRACT(year FROM data) -> Extrai o ano
+NOW() -> Pega o timestamp de agora 
+AGE(data) -> Calcula (NOW() - data)
+CURRENT_DATE -> Pega a data atual
+CURRENT_TIME -> Pega a hora atual
+```
