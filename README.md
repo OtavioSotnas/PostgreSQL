@@ -328,7 +328,7 @@ FROM (
 WHERE numero_cursos > 3;
 ```
 
-## 7. FUNCOES DO POSTGRESQL
+## 7. FUNÇOES DO POSTGRESQL
 
 ### 7.1 Funções de String
 
@@ -343,7 +343,7 @@ LEFT(endereco, 3)  --> Pega as 3 primeiras letras
 RIGHT(endereco, 5) --> Pega as 5 últimas letras
 ```
 
-### 7.1 Funções Numéricas
+### 7.2 Funções Numéricas
 
 ```sql
 DIV(valor, 2) --> Divisão 
@@ -354,7 +354,7 @@ EXP(valor) --> Exp do número
 PI() --> Constante pi
 ```
 
-### 7.1 Funções de Data
+### 7.3 Funções de Data
 
 ```sql
 EXTRACT(day FROM data) --> Extrai a parte específica de uma data
@@ -364,4 +364,14 @@ NOW() --> Pega o timestamp de agora
 AGE(data) --> Calcula (NOW() - data)
 CURRENT_DATE --> Pega a data atual
 CURRENT_TIME --> Pega a hora atual
+```
+
+### 7.4 Conversão de Dados
+
+```sql
+CAST(valor AS INTEGER), --> Converte para inteiro
+TO_CHAR(valor, '99D9999') , --> Converte valor para str e adiciona 4 pós virgula
+TO_CHAR(data, 'DD/MM/YYYYY') --> Converte data para str na formatação escolhida
+NOW() :: DATE --> Converte NOW() para tipo DATE
+valor_float :: INTEGER --> Converte float para integer
 ```
