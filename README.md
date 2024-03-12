@@ -341,6 +341,7 @@ INITCAP(ultimo_nome) --> Deixa primeiras letras maiúsculas
 CONCAT(primeiro_nome, ' ', ultimo_nome) --> Concatena também (mas deixa nulos vazios)
 LEFT(endereco, 3)  --> Pega as 3 primeiras letras 
 RIGHT(endereco, 5) --> Pega as 5 últimas letras
+SPLIT_PART(coluna, ' ', 1) --> Separa a string em arrays por um separador
 ```
 
 ### 7.2 Funções Numéricas
