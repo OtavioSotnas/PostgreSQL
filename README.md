@@ -295,3 +295,20 @@ SELECT nome, COUNT(id)
     GROUP BY nome
     HAVING COUNT(id) > 1;
 ```
+
+## 6. EXECUTANDO SUB-CONSULTAS
+
+### 6.1 Operador IN
+
+```sql
+SELECT * FROM curso WHERE categoria_id IN (1,2)
+```
+
+### 6.2 Sub-query com IN
+
+```sql
+-- Retorna todos os cursos onde a categoria não tenha espaço
+SELECT * FROM curso WHERE categoria_id IN (
+    SELECT id FROM categoria WHERE nome NOT LIKE ('% %')
+);
+```
