@@ -310,5 +310,5 @@ SELECT * FROM curso WHERE categoria_id IN (1,2)
 -- Retorna todos os cursos onde a categoria não tenha espaço
 SELECT * FROM curso WHERE categoria_id IN (
     SELECT id FROM categoria WHERE nome NOT LIKE ('% %')
-);
+)
 ```
