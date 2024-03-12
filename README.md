@@ -357,11 +357,11 @@ PI() -- Constante pi
 ### 7.1 Funções de Data
 
 ```sql
-EXTRACT(day FROM data) -> Extrai a parte específica de uma data
-EXTRACT(month FROM data) -> Extrai o mês
-EXTRACT(year FROM data) -> Extrai o ano
-NOW() -> Pega o timestamp de agora 
-AGE(data) -> Calcula (NOW() - data)
-CURRENT_DATE -> Pega a data atual
-CURRENT_TIME -> Pega a hora atual
+EXTRACT(day FROM data) -- Extrai a parte específica de uma data
+EXTRACT(month FROM data) -- Extrai o mês
+EXTRACT(year FROM data) -- Extrai o ano
+NOW() -- Pega o timestamp de agora 
+AGE(data) -- Calcula (NOW() - data)
+CURRENT_DATE -- Pega a data atual
+CURRENT_TIME --> Pega a hora atual
 ```
