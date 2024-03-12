@@ -327,3 +327,18 @@ FROM (
     ) AS categoria_cursos
 WHERE numero_cursos > 3;
 ```
+
+## 7. FUNCOES DO POSTGRESQL
+
+### 7.1 Funções de String
+
+```sql
+LENGTH(primeiro_nome) -- Mede o tamanho das palavras
+UPPER(primeiro_nome) -- Deixa tudo maiúsculo
+LOWER(primeiro_nome) -- Deixa tudo minúsculo
+INITCAP(ultimo_nome) -- Deixa primeiras letras maiúsculas 
+(primeiro_nome || ' ' || ultimo_nome)  -- Concatena os nomes
+CONCAT(primeiro_nome, ' ', ultimo_nome) -- Concatena também (mas deixa nulos vazios)
+LEFT(endereco, 3)  -- Pega as 3 primeiras letras 
+RIGHT(endereco, 5) -- Pega as 5 últimas letras
+```
