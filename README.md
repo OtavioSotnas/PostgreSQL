@@ -148,6 +148,13 @@ CREATE TABLE turma (
 
     FOREIGN KEY (aluno_id)
     REFERENCES aluno (id),
+
+-- Outra sintaxe para FOREIGN KEY
+CREATE TABLE turma (
+	aluno_id INTEGER NOT NULL REFERENCES aluno(id),
+	curso_id INTEGER NOT NULL REFERENCES curso(id),
+	PRIMARY KEY (aluno_id, curso_id)
+
 ```
 
 ### 3.3 Constraint Check
